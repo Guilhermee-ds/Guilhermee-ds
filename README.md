@@ -7,9 +7,7 @@
 <div style="display: inline_block"><br>
   <img align="center" alt="Rafa-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
   
-  <h2>Top linguagens:</h2>
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Guilhermedossantosoliv&theme=radical)](https://github.com/Guilhermedossantosoliv/github-readme-stats)
+ 
   ##
  
 <div>
@@ -31,7 +29,7 @@
 </div>
   
   - 👋 Olá, eu sou @Guilhermesantosoliv.
-  - 👀 Estou interessado em trabalhar na area de programação .
+  - 👀 Estou interessado em trabalhar na area de programação.
   - 🌱 Estou atualmente a aprender python.
   - 💞️ Estou à procura de colaborar no crescimento profissional. 
   - 📫 Como chegar até mim contato.guilhermedossantos@gmail.com.
