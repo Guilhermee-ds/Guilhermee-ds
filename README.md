@@ -12,9 +12,9 @@ No momento, estou trabalhando em Desenvolvedor de Software e Data Science.<br>Es
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=azure-devops&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
 
 <div>
-    <img  height="180em" src="https://github-readme-stats.vercel.app/api?username=Guilhermesantosoliv&show_icons=true&theme=great-gatsby&include_all_commits=true&count_private=true"/>
+<img  height="180em" src="https://github-readme-stats.vercel.app/api?username=Guilhermesantosoliv&show_icons=true&theme=great-gatsby&include_all_commits=true&count_private=true"/>
     
-  <img align="right" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Guilhermesantosoliv&layout=compact&langs_count=16&theme=great-gatsby"/>
+<img align="right" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Guilhermesantosoliv&layout=compact&langs_count=16&theme=great-gatsby"/>
 </div>
 
 <br>
