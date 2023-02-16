@@ -19,7 +19,7 @@ No momento, estou trabalhando em Desenvolvedor de Software e Data Science.<br>Es
 ## 🏆 Troféus do GitHub
 ![](https://github-profile-trophy.vercel.app/?username=Guilhermesantosoliv&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
-### ✍️ Random Dev Quote
+### ✍️ Frase do dia
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ---
