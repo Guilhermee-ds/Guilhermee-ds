@@ -1,6 +1,7 @@
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=Guilhermesantosoliv&label=Profile%20views&color=0e75b6&style=flat" alt="Guilhermesantosoliv" /> </p>
+
 # 💫 Sobre mim:
 No momento, estou trabalhando em Desenvolvedor de Software e Data Science.<br>Estou procurando colaborar Desenvolvedor de Software e Data Science.<br>Atualmente estou aprendendo Power BI, Aws, Azure, Python, SQL, Pandas.<br>Curiosidade, eu sou uma pessoa muito esforçada que sempre quer aprender coisas novas.
-
 
 
 ## 🌐 Socials:
@@ -19,8 +20,7 @@ No momento, estou trabalhando em Desenvolvedor de Software e Data Science.<br>Es
 ## 🏆 Troféus do GitHub
 ![](https://github-profile-trophy.vercel.app/?username=Guilhermesantosoliv&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
-### ✍️ Frase do dia
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
 
 ---
 ![Snake animation](https://github.com/LuigiGF/LuigiGF/blob/output/github-contribution-grid-snake.svg)
