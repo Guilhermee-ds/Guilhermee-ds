@@ -1,4 +1,5 @@
 # 💫 Sobre mim:
+
 🚀 Olá! Sou um estudante apaixonado por tecnologia e atualmente cursando o 3º semestre de Análise e Desenvolvimento de Sistemas na Anhembi Morumbi. Tenho 19 anos e estou buscando oportunidades para crescer profissionalmente na área de Desenvolvimento Backend e Data Science.
 
 🐍 Minhas habilidades incluem programação em Python e manipulação de dados com Pandas, o que me permite analisar e extrair insights valiosos de grandes conjuntos de dados. Além disso, tenho conhecimento no uso de .SQL para consultas a bancos de dados e na criação de relatórios e dashboards envolventes com Power BI.
@@ -9,6 +10,7 @@
 
 
 ## 🌐 Socials:
+
 <a href="https://www.linkedin.com/in/guilherme-oliveira-121b16239/" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /> 
 <a href="mailto:contato.guilhermedossantos@gmail.com">
@@ -20,13 +22,8 @@
 # 📊 Estatísticas do GitHub:
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=Guilhermesantosoliv&label=Profile%20views&color=0e75b6&style=flat" alt="Guilhermesantosoliv" /> </p>
 
-        
+---        
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Guilhermesantosoliv&theme=vision-friendly-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)<br/> <br/> 
 ![](https://github-readme-stats.vercel.app/api?username=Guilhermesantosoliv&theme=vision-friendly-dark&hide_border=false&include_all_commits=true&count_private=true)<br/> <br/> 
 ![](https://github-readme-streak-stats.herokuapp.com/?user=Guilhermesantosoliv&theme=vision-friendly-dark&hide_border=false)<br/> <br/> 
-
-
-
----
-![Snake animation](https://github.com/Guilhermesantosoliv/GuilhermesantosolivGuilhermesantosoliv/blob/output/github-contribution-grid-snake.svg)
 ---
