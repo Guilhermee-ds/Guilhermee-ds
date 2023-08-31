@@ -38,6 +38,15 @@
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Guilhermee-ds&theme=vision-friendly-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 <!--START_SECTION:waka-->
+
+```txt
+Python           43 mins         ████████████▓░░░░░░░░░░░░   50.18 %
+TypeScript       20 mins         ██████░░░░░░░░░░░░░░░░░░░   23.71 %
+JSON             12 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.05 %
+HTML             4 mins          █▒░░░░░░░░░░░░░░░░░░░░░░░   05.00 %
+TSConfig         3 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   04.33 %
+```
+
 <!--END_SECTION:waka-->
 
 
