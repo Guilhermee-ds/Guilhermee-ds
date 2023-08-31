@@ -37,5 +37,10 @@
 ![](https://github-readme-streak-stats.herokuapp.com/?user=Guilhermee-ds&theme=vision-friendly-dark&hide_border=false)<br>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Guilhermee-ds&theme=vision-friendly-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+
+
 <br/> 
 ---
