@@ -40,6 +40,10 @@
 <!--START_SECTION:waka-->
 
 ```txt
+From: 24 August 2023 - To: 31 August 2023
+
+Total Time: 3 hrs 48 mins
+
 Python           1 hr 23 mins    █████████████▓░░░░░░░░░░░   54.34 %
 TypeScript       20 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.36 %
 JSON             12 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.97 %
