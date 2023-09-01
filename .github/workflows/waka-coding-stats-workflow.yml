@@ -15,3 +15,8 @@ jobs:
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }} # optional if on profile readme
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }} # required
+          SHOW_TITLE: true
+          BLOCKS: ░▒▓█
+          TIME_RANGE: last_7_days
+          SHOW_TIME: true
+          SHOW_MASKED_TIME: true
