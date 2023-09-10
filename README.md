@@ -38,7 +38,7 @@
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Guilhermee-ds&theme=vision-friendly-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 <!--START_SECTION:waka-->
-
+# 📊 Estatísticas da Semana do WakaTime
 ```txt
 JavaScript     2 hrs 45 mins   █████████▒░░░░░░░░░░░░░░░   37.54 %
 HTML           2 hrs 28 mins   ████████▒░░░░░░░░░░░░░░░░   33.57 %
