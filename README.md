@@ -37,19 +37,4 @@
 ![](https://github-readme-streak-stats.herokuapp.com/?user=Guilhermee-ds&theme=vision-friendly-dark&hide_border=false)<br>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Guilhermee-ds&theme=vision-friendly-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
-<!--START_SECTION:waka-->
-
-```txt
-HTML             5 hrs 50 mins   ████████████████▓░░░░░░░░   66.56 %
-JavaScript       56 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.82 %
-PHP              42 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   08.16 %
-JSON             30 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.76 %
-XML              13 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.56 %
-```
-
-<!--END_SECTION:waka-->
-
-
-
-<br/> 
 ---
