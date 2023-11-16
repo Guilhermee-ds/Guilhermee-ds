@@ -1,0 +1,17 @@
+name: Update badges
+
+on:
+  schedule:
+    # Runs at 2am UTC
+      - cron: "0 2 * * *"
+       #push:
+        #branches: ["main"]
+jobs:
+  update-readme:
+    name: Update Readme with badges
+    runs-on: ubuntu-latest
+    steps:
+      - name: Badges - Readme
+        uses: pemtajo/badge-readme@main
+        with:       
+          CREDLY_USER: guilherme-oliveira.54e02c9b # optional, but default will use the same from github
