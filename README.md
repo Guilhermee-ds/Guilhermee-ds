@@ -15,6 +15,13 @@
 <a href="mailto:contato.guilhermedossantos@gmail.com">
         <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
 
+
+#  🏅My badges
+<!--START_SECTION:badges-->
+
+<!--END_SECTION:badges-->
+
+
 # 💻 Minhas tecnologias:
 - # Back-end:
   ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white) 
