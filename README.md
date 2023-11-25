@@ -18,6 +18,7 @@
 
 #  🏅My badges
 <!--START_SECTION:badges-->
+[![AWS Educate Getting Started with Compute](https://images.credly.com/size/110x110/images/9358115e-ead7-47c2-91e2-165b6a650a1b/image.png)](http://www.credly.com/badges/a68e5b02-fec3-4707-b2c6-ada6907ccf7a "AWS Educate Getting Started with Compute")
 [![LFS169: Introduction to GitOps](https://images.credly.com/size/110x110/images/5426612d-4ded-4408-bfaa-dbe3210f9cf9/LF_logobadge.png)](http://www.credly.com/badges/7d022af3-a6a0-485a-89b4-3388cafecd0f "LFS169: Introduction to GitOps")
 [![AWS Educate Getting Started with Storage](https://images.credly.com/size/110x110/images/5bf37709-4b69-4cdc-9edc-af7b3370d427/image.png)](http://www.credly.com/badges/354be510-abc6-422c-96f6-cea316e14c09 "AWS Educate Getting Started with Storage")
 [![AWS Educate Introduction to Cloud 101](https://images.credly.com/size/110x110/images/8d67bbf4-128b-4141-b5f1-1bc61bbfbaa6/image.png)](http://www.credly.com/badges/ddb16099-38a4-4b70-bdf0-1bc9b1f5119b "AWS Educate Introduction to Cloud 101")
