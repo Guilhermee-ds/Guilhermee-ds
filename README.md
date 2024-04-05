@@ -1,12 +1,14 @@
 # 💫 Sobre mim:
 <img align="right" width="300" src="https://i2.wp.com/allhtaccess.info/wp-content/uploads/2018/03/programming.gif?fit=1281%2C716&ssl=1" />
-🚀 Olá! Sou um Desenvolvedor Full-Stack apaixonado por tecnologia e atualmente cursando o 3º semestre de Análise e Desenvolvimento de Sistemas na Anhembi Morumbi. Tenho 19 anos e estou buscando oportunidades para crescer profissionalmente na área de Desenvolvimento Full-Stack e Data Science.
+🚀 Olá! Sou um Desenvolvedor Full-Stack apaixonado por tecnologia e atualmente cursando o 5º semestre de Análise e Desenvolvimento de Sistemas na Anhembi Morumbi. Tenho 19 anos e estou buscando oportunidades para crescer profissionalmente na área de Desenvolvimento Full-Stack e Data Science.
 
 🐍 Minhas habilidades incluem programação em Python e manipulação de dados com Pandas, o que me permite analisar e extrair insights valiosos de grandes conjuntos de dados. Além disso, tenho conhecimento no uso de .SQL para consultas a bancos de dados e na criação de relatórios e dashboards envolventes com Power BI.
 
 ☁️ Estou familiarizado com o trabalho em ambientes de nuvem, como Aws  e Azure, o que me permite criar soluções escaláveis e eficientes para o processamento e análise de dados. Estou constantemente buscando aprimorar minhas habilidades e aprender novas tecnologias para me tornar um profissional cada vez mais completo na área de Data Science.
 
 🎯 Minha meta é unir minha paixão pelo desenvolvimento Backend e Data Science para criar soluções ágeis e inovadoras. Estou sempre interessado em expandir minha rede e colaborar em projetos desafiadores. Sinta-se à vontade para entrar em contato comigo!
+
+<h3><a href="https://guilhermee-ds.github.io/Portifolio/">PORTIFOLIO</a></h3>
 
 ## 🌐 Socials:
 
