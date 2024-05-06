@@ -32,7 +32,7 @@
 
 # 💻 Minhas tecnologias:
 - # Back-end:
-   [![My Skills](https://skillicons.dev/icons?i=php,go,python,dart)](https://skillicons.dev)
+   [![My Skills](https://skillicons.dev/icons?i=php,go,python)](https://skillicons.dev)
 
  - # Front-end:
    [![My Skills](https://skillicons.dev/icons?i=html,css,ts,js)](https://skillicons.dev)
