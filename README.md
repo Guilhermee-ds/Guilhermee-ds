@@ -21,6 +21,7 @@
 
 #  🏅My badges
 <!--START_SECTION:badges-->
+[![Docker Essentials: A Developer Introduction](https://images.credly.com/size/110x110/images/08216781-93cb-4ba1-8110-8eb3401fa8ce/Docker_Essentials_-_ISDN.png)](http://www.credly.com/badges/ee814189-f1c3-4aff-87f6-badce04a36ca "Docker Essentials: A Developer Introduction")
 [![AWS Educate Getting Started with Databases](https://images.credly.com/size/110x110/images/6f135924-7645-4bd2-ab68-3bc0b49c7e27/image.png)](http://www.credly.com/badges/c1fc2aa7-46ad-44dc-a86f-f7e8e8edf6a3 "AWS Educate Getting Started with Databases")
 [![AWS Educate Getting Started with Networking](https://images.credly.com/size/110x110/images/979e42e2-1d32-4d21-97ea-53d991ea50fb/image.png)](http://www.credly.com/badges/b48a5637-54b0-45f3-a840-effdb971ecdb "AWS Educate Getting Started with Networking")
 [![AWS Educate Getting Started with Compute](https://images.credly.com/size/110x110/images/9358115e-ead7-47c2-91e2-165b6a650a1b/image.png)](http://www.credly.com/badges/a68e5b02-fec3-4707-b2c6-ada6907ccf7a "AWS Educate Getting Started with Compute")
