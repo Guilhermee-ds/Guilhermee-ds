@@ -21,6 +21,7 @@
 
 #  🏅My badges
 <!--START_SECTION:badges-->
+[![AWS Educate Introduction to Generative AI](https://images.credly.com/size/110x110/images/4b68a030-53d0-414b-be57-b1837bc3b3e6/image.png)](http://www.credly.com/badges/1fb41b6c-7ece-4c0e-ae49-47c60699245f "AWS Educate Introduction to Generative AI")
 [![AWS Educate Getting Started with Security](https://images.credly.com/size/110x110/images/80845928-d1f8-4549-ae9d-27676fba897e/image.png)](http://www.credly.com/badges/f6acfe33-e2a6-4126-9310-a572554e06fb "AWS Educate Getting Started with Security")
 [![AWS Educate Getting Started with Cloud Ops](https://images.credly.com/size/110x110/images/01c3b0d4-a225-483b-a762-460473658c1a/image.png)](http://www.credly.com/badges/65f87992-ee72-403c-86f0-2b5485a9b539 "AWS Educate Getting Started with Cloud Ops")
 [![Docker Essentials: A Developer Introduction](https://images.credly.com/size/110x110/images/b0c5445a-72a2-46ce-a599-96147e210efb/blob)](http://www.credly.com/badges/ee814189-f1c3-4aff-87f6-badce04a36ca "Docker Essentials: A Developer Introduction")
