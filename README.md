@@ -1,14 +1,40 @@
 # 💫 Sobre mim:
 <img align="right" width="300" src="https://i2.wp.com/allhtaccess.info/wp-content/uploads/2018/03/programming.gif?fit=1281%2C716&ssl=1" />
-🚀 Olá! Sou um Desenvolvedor Full-Stack apaixonado por tecnologia e atualmente cursando o 5º semestre de Análise e Desenvolvimento de Sistemas na Anhembi Morumbi. Tenho 19 anos e estou buscando oportunidades para crescer profissionalmente na área de Desenvolvimento Full-Stack e Data Science.
 
-🐍 Minhas habilidades incluem programação em Python e manipulação de dados com Pandas, o que me permite analisar e extrair insights valiosos de grandes conjuntos de dados. Além disso, tenho conhecimento no uso de SQL para consultas a bancos de dados e na criação de relatórios e dashboards envolventes.
+🚀 Desenvolvedor Full-Stack | LLMs | Cloud | DevOps
 
-🌐 Também trabalho com **Go (Golang)** para a criação de APIs, tanto **gRPC** quanto **RESTful**. Tenho experiência em desenvolver soluções escaláveis e eficientes para o processamento e análise de dados em ambientes de nuvem, como **AWS** e **Azure**.
+Olá! Sou um Desenvolvedor Full-Stack formado em Análise e Desenvolvimento de Sistemas pela Anhembi Morumbi. Tenho 21 anos e 3 anos de experiência criando soluções escaláveis, eficientes e inovadoras. Minha paixão por tecnologia me motiva a explorar novas tendências, desde desenvolvimento web até inteligência artificial e cloud computing.
 
-🐘 Além disso, tenho experiência sólida em PHP e Laravel, especialmente para projetos de grande escala, como aplicações de e-commerce e outras soluções robustas.
+🛠 Tech Stack 
 
-🎯 Minha meta é unir minha paixão pelo desenvolvimento Backend e Data Science para criar soluções ágeis e inovadoras. Estou sempre interessado em expandir minha rede e colaborar em projetos desafiadores. Sinta-se à vontade para entrar em contato comigo!
+•› 💻 Full-Stack & Backend 
+
+•› 🏗️ Desenvolvimento de APIs escaláveis (gRPC & RESTful) com Go (Golang) 
+
+•› 🐘 Experiência sólida com PHP & Laravel no desenvolvimento de sistemas robustos e escaláveis. 
+
+•› 🖥️ Desenvolvimento e otimização de sistemas com Docker & Kubernetes 
+
+
+🧠 LLMs & Inteligência Artificial 
+
+•› 🐍 Python para automação e integração com modelos de IA 
+
+•› 🔗 LangChain para orquestração de modelos de linguagem 
+
+•› 🧠 LLMs (Ollama, Neo4j, bancos vetoriais) para recuperação e geração de conhecimento 
+
+
+☁️ Cloud & DevOps 
+
+•› 🚀 AWS & Azure para hospedagem e escalabilidade 
+
+•› 🐳 Docker & Kubernetes para automação e infraestrutura como código 
+
+•› 🔄 CI/CD para pipelines eficientes
+
+
+Se você está procurando um desenvolvedor apaixonado por tecnologia para agregar valor ao seu projeto, vamos conversar! 🚀✨
 <h3><a href="https://guilhermee-ds.github.io/Portifolio/">PORTIFOLIO</a></h3>
 
 ## 🌐 Socials:
