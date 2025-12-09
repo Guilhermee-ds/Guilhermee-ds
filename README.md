@@ -59,6 +59,7 @@ Se você está procurando um desenvolvedor apaixonado por tecnologia para agrega
 <a href="https://www.credly.com/badges/7d022af3-a6a0-485a-89b4-3388cafecd0f" title="LFS169: Introduction to GitOps"><img src="https://images.credly.com/size/80x80/images/032a65da-a036-4d05-ad80-8fc1274363ab/blob" alt="LFS169: Introduction to GitOps" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/354be510-abc6-422c-96f6-cea316e14c09" title="AWS Educate Getting Started with Storage - Training Badge"><img src="https://images.credly.com/size/80x80/images/3b1b42e6-dfc2-492b-90df-8058096cb93d/blob" alt="AWS Educate Getting Started with Storage - Training Badge" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/ddb16099-38a4-4b70-bdf0-1bc9b1f5119b" title="AWS Educate Introduction to Cloud 101 - Training Badge"><img src="https://images.credly.com/size/80x80/images/e51a8579-188d-4363-8ed1-12ad164ef57b/blob" alt="AWS Educate Introduction to Cloud 101 - Training Badge" width="80" height="80"></a>
+<a href="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/168632834" title="Databricks Badge"><img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/168632834" width="80" height="80"></a>
 <!--END_SECTION:badges-->
 
 
