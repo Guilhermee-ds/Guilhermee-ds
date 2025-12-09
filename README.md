@@ -60,6 +60,12 @@ Se você está procurando um desenvolvedor apaixonado por tecnologia para agrega
 <a href="https://www.credly.com/badges/354be510-abc6-422c-96f6-cea316e14c09" title="AWS Educate Getting Started with Storage - Training Badge"><img src="https://images.credly.com/size/80x80/images/3b1b42e6-dfc2-492b-90df-8058096cb93d/blob" alt="AWS Educate Getting Started with Storage - Training Badge" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/ddb16099-38a4-4b70-bdf0-1bc9b1f5119b" title="AWS Educate Introduction to Cloud 101 - Training Badge"><img src="https://images.credly.com/size/80x80/images/e51a8579-188d-4363-8ed1-12ad164ef57b/blob" alt="AWS Educate Introduction to Cloud 101 - Training Badge" width="80" height="80"></a>
 <a href="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/168632834" title="Databricks Badge"><img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/168632834" width="80" height="80"></a>
+<a href="https://www.virtualbadge.io/certificate-validator?credential=902f9e06-d985-4065-9103-82cbf01bb015" title="VirtualBadge - Certificate Validator">
+    <img src="https://vbeventstorage.blob.core.windows.net/cert-tcuby6mnfvdci3u0-sbfl/openbadges/badges/902f9e06-d985-4065-9103-82cbf01bb015.png" 
+         alt="VirtualBadge" width="80" height="80">
+</a>
+
+
 <!--END_SECTION:badges-->
 
 
