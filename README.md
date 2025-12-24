@@ -1,41 +1,24 @@
-# 💫 Sobre mim:
-<img align="right" width="300" src="https://i2.wp.com/allhtaccess.info/wp-content/uploads/2018/03/programming.gif?fit=1281%2C716&ssl=1" />
+## 🇧🇷 Sobre — Português (Brasil)
 
-🚀 Desenvolvedor Full-Stack | LLMs | Cloud | DevOps
+**Software Engineer** com **+2 anos de experiência** em **backend, cloud e IA aplicada**. Atuação focada em **design e implementação de APIs REST escaláveis**, **arquitetura de sistemas**, **automação** e **soluções de IA baseadas em RAG**.
 
-Olá! Sou um Desenvolvedor Full-Stack formado em Análise e Desenvolvimento de Sistemas pela Anhembi Morumbi. Tenho 21 anos e 3 anos de experiência criando soluções escaláveis, eficientes e inovadoras. Minha paixão por tecnologia me motiva a explorar novas tendências, desde desenvolvimento web até inteligência artificial e cloud computing.
+Experiência com **refatoração de sistemas legados**, **otimização de performance**, **integrações com serviços externos** e **ambientes distribuídos** em **AWS**.
 
-🛠 Tech Stack 
+**Tech Stack:**
+Python · Go · PHP · AWS (S3, Bedrock) · Docker · Elasticsearch · REST · SQL · Linux · RAG · LangChain · LLMs · Cloud Architecture
 
-•› 💻 Full-Stack & Backend 
+---
 
-•› 🏗️ Desenvolvimento de APIs escaláveis (gRPC & RESTful) com Go (Golang) 
+## 🇺🇸 About — English
 
-•› 🐘 Experiência sólida com PHP & Laravel no desenvolvimento de sistemas robustos e escaláveis. 
+**Software Engineer** with **2+ years of experience** in **backend engineering, cloud, and applied AI**. Focused on **designing and building scalable REST APIs**, **system architecture**, **automation**, and **RAG-based AI solutions**.
 
-•› 🖥️ Desenvolvimento e otimização de sistemas com Docker & Kubernetes 
+Experienced in **legacy system refactoring**, **performance optimization**, **external service integrations**, and **distributed systems on AWS**.
 
+**Tech Stack:**
+Python · Go · PHP · AWS (S3, Bedrock) · Docker · Elasticsearch · REST · SQL · Linux · RAG · LangChain · LLMs · Cloud Architecture
 
-🧠 LLMs & Inteligência Artificial 
-
-•› 🐍 Python para automação e integração com modelos de IA 
-
-•› 🔗 LangChain para orquestração de modelos de linguagem 
-
-•› 🧠 LLMs (Ollama, Neo4j, bancos vetoriais) para recuperação e geração de conhecimento 
-
-
-☁️ Cloud & DevOps 
-
-•› 🚀 AWS & Azure para hospedagem e escalabilidade 
-
-•› 🐳 Docker & Kubernetes para automação e infraestrutura como código 
-
-•› 🔄 CI/CD para pipelines eficientes
-
-
-Se você está procurando um desenvolvedor apaixonado por tecnologia para agregar valor ao seu projeto, vamos conversar! 🚀✨
-<h3><a href="https://guilhermee-ds.github.io/Portifolio/">PORTIFOLIO</a></h3>
+---
 
 ## 🌐 Socials:
 
