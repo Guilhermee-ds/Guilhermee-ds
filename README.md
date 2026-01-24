@@ -30,6 +30,7 @@ Python · Go · PHP · AWS (S3, Bedrock) · Docker · Elasticsearch · REST · S
 
 #  🏅My badges
 <!--START_SECTION:badges-->
+<a href="https://www.credly.com/badges/c2aed2f6-af21-490c-84a2-8f1c9725d187" title="Lifelong Learning 2026"><img src="https://images.credly.com/size/80x80/images/5e2afabf-62f3-48ae-bbed-7e57c2e78c6a/blob" alt="Lifelong Learning 2026" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/a312c85e-2131-4df4-826a-1be1223c057f" title="Chainguard AI/ML Guardian"><img src="https://images.credly.com/size/80x80/images/5750aba6-98f3-43dd-b2d0-3d5a5d11edfd/blob" alt="Chainguard AI/ML Guardian" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/a28034f9-53f7-443c-98f2-21dd85dd7a3c" title="Building AI-Powered Search with MongoDB Vector Search"><img src="https://images.credly.com/size/80x80/images/730e9c82-7869-4288-b580-9f8500a94465/blob" alt="Building AI-Powered Search with MongoDB Vector Search" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/1fb41b6c-7ece-4c0e-ae49-47c60699245f" title="AWS Educate Introduction to Generative AI - Training Badge"><img src="https://images.credly.com/size/80x80/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" alt="AWS Educate Introduction to Generative AI - Training Badge" width="80" height="80"></a>
