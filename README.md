@@ -1,22 +1,54 @@
 ## 🇧🇷 Sobre — Português (Brasil)
 
-**Software Engineer** com **+2 anos de experiência** em **backend, cloud e IA aplicada**. Atuação focada em **design e implementação de APIs REST escaláveis**, **arquitetura de sistemas**, **automação** e **soluções de IA baseadas em RAG**.
+Engenheiro de Software com +2 anos de experiência prática no desenvolvimento de sistemas backend escaláveis, soluções em cloud e aplicações com IA.
 
-Experiência com **refatoração de sistemas legados**, **otimização de performance**, **integrações com serviços externos** e **ambientes distribuídos** em **AWS**.
+Atuo no desenvolvimento de aplicações em produção que combinam performance backend, sistemas distribuídos, automação e IA aplicada, com foco em integrações com LLMs e RAG (Retrieval-Augmented Generation).
 
-**Tech Stack:**
-Python · Go · PHP · AWS (S3, Bedrock) · Docker · Elasticsearch · REST · SQL · Linux · RAG · LangChain · LLMs · Cloud Architecture
+Principais pontos
+• Backend & APIs: desenvolvimento de APIs REST escaláveis, processamento assíncrono e sistemas de alto volume
+
+• Linguagens: Go, PHP (Laravel) e Python para automação e integração com IA
+
+• IA & RAG: LangChain, busca vetorial (FAISS), embeddings e integração com LLMs
+
+• Cloud & Infra: AWS (EC2, S3, Bedrock), Docker e arquiteturas escaláveis com foco em custo
+
+• Automação: workflows com n8n, webhooks e integrações orientadas a eventos
+
+• Mobile: desenvolvimento e manutenção de aplicações com React Native
+
+• Performance: refatoração de sistemas legados, redução de latência e melhoria de confiabilidade
 
 ---
 
 ## 🇺🇸 About — English
 
-**Software Engineer** with **2+ years of experience** in **backend engineering, cloud, and applied AI**. Focused on **designing and building scalable REST APIs**, **system architecture**, **automation**, and **RAG-based AI solutions**.
+Software Engineer with 2+ years of hands-on experience building scalable and reliable backend systems, cloud-based solutions, and AI-powered features.
 
-Experienced in **legacy system refactoring**, **performance optimization**, **external service integrations**, and **distributed systems on AWS**.
+I design and deliver production-ready applications combining backend performance, distributed systems, and applied AI — with a strong focus on LLM integrations and Retrieval-Augmented Generation (RAG).
 
-**Tech Stack:**
-Python · Go · PHP · AWS (S3, Bedrock) · Docker · Elasticsearch · REST · SQL · Linux · RAG · LangChain · LLMs · Cloud Architecture
+Core strengths
+• Backend & APIs: design of scalable REST APIs, async processing, and high-throughput systems
+
+• Languages: Go (Golang), PHP (Laravel), Python for automation and AI integration
+
+• AI & RAG: LangChain, vector search (FAISS), embeddings, and LLM integrations (OpenAI, Ollama)
+
+• Cloud & Infra: AWS (EC2, S3, Bedrock), Docker, cost-efficient and scalable architectures
+
+• Automation: workflow automation with n8n, webhooks, and event-driven integrations
+
+• Mobile: experience building and maintaining apps with React Native
+
+• Systems & Performance: refactoring legacy systems, reducing latency, and improving reliability
+
+
+What I bring
+• Experience building end-to-end systems integrating backend, cloud, automation, and AI
+• Strong focus on performance, scalability, and cost optimization
+• Practical mindset: I prioritize working solutions over unnecessary complexity
+
+Open to Backend, AI Engineering (LLM/RAG), or Cloud-focused roles.
 
 ---
 
