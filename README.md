@@ -1,6 +1,6 @@
 ## 🇧🇷 Sobre — Português (Brasil)
 
-Engenheiro de Software com +2 anos de experiência prática no desenvolvimento de sistemas backend escaláveis, soluções em cloud e aplicações com IA.
+Engenheiro de Software com +3 anos de experiência prática no desenvolvimento de sistemas backend escaláveis, soluções em cloud e aplicações com IA.
 
 Atuo no desenvolvimento de aplicações em produção que combinam performance backend, sistemas distribuídos, automação e IA aplicada, com foco em integrações com LLMs e RAG (Retrieval-Augmented Generation).
 
@@ -23,7 +23,7 @@ Principais pontos
 
 ## 🇺🇸 About — English
 
-Software Engineer with 2+ years of hands-on experience building scalable and reliable backend systems, cloud-based solutions, and AI-powered features.
+Software Engineer with 3+ years of hands-on experience building scalable and reliable backend systems, cloud-based solutions, and AI-powered features.
 
 I design and deliver production-ready applications combining backend performance, distributed systems, and applied AI — with a strong focus on LLM integrations and Retrieval-Augmented Generation (RAG).
 
