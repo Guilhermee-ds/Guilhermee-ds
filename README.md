@@ -62,6 +62,7 @@ Open to Backend, AI Engineering (LLM/RAG), or Cloud-focused roles.
 
 #  🏅My badges
 <!--START_SECTION:badges-->
+<a href="https://www.credly.com/badges/3d330154-651a-4682-aaf9-cf6935077eca" title="Building AI Agents with MongoDB"><img src="https://images.credly.com/size/80x80/images/252ed95c-8043-44f5-ae1f-6f5a6cf313c4/blob" alt="Building AI Agents with MongoDB" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/c2aed2f6-af21-490c-84a2-8f1c9725d187" title="Lifelong Learning 2026"><img src="https://images.credly.com/size/80x80/images/5e2afabf-62f3-48ae-bbed-7e57c2e78c6a/blob" alt="Lifelong Learning 2026" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/a312c85e-2131-4df4-826a-1be1223c057f" title="Chainguard AI/ML Guardian"><img src="https://images.credly.com/size/80x80/images/5750aba6-98f3-43dd-b2d0-3d5a5d11edfd/blob" alt="Chainguard AI/ML Guardian" width="80" height="80"></a>
 <a href="https://www.credly.com/badges/a28034f9-53f7-443c-98f2-21dd85dd7a3c" title="Building AI-Powered Search with MongoDB Vector Search"><img src="https://images.credly.com/size/80x80/images/730e9c82-7869-4288-b580-9f8500a94465/blob" alt="Building AI-Powered Search with MongoDB Vector Search" width="80" height="80"></a>
