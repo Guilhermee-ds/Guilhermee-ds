@@ -3,8 +3,7 @@ name: Update badges
 on:
   schedule:
     - cron: "0 2 * * *"
-  # push:
-  #   branches: ["main"]
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -19,7 +18,8 @@ jobs:
 
       - name: Fix badges inline layout
         run: |
-          # Remove quebras de linha entre as imagens das badges para forçar o layout inline
-          sed -i '/<a href="https:\/\/www.credly.com\/badges\// { N; s/\n//; }' README.md
-          # Remove espaços excessivos entre as tags de imagem
-          sed -i 's/> </></g' README.md
+          # Remove quebras de linha entre badges
+          tr '\n' ' ' < README.md > README.tmp && mv README.tmp README.md
+
+          # Limpa múltiplos espaços
+          sed -i 's/[[:space:]]\+/ /g' README.md
