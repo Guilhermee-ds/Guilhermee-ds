@@ -24,7 +24,7 @@ jobs:
 
       - name: Fetch badges and update README
         env:
-          CREDLY_USER: guilherme-oliveira.54e02c9b  # ← seu usuário do Credly
+          CREDLY_USER: guilherme-oliveira.54e02c9b
         run: |
           python3 - <<'EOF'
           import os
@@ -68,11 +68,9 @@ jobs:
                   f'<img src="{image_url}" alt="{title}" width="80" height="80"></a>'
               )
 
-          grid_html = (
-              '<div align="left">\n\n'
-              + "".join(items)
-              + "\n\n</div>"
-          )
+          # GitHub Markdown: imagens ficam inline quando NAO ha quebra de linha entre elas
+          # \n\n dentro de bloco HTML faz o GitHub sair do modo HTML e quebra o layout
+          grid_html = "<p>" + "".join(items) + "</p>"
 
           # ── 3. Substitui o bloco no README ──────────────────────────────
           with open(README_PATH, "r", encoding="utf-8") as f:
