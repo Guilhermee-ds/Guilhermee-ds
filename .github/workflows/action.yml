@@ -1,33 +1,41 @@
-name: Update badges
-
 on:
+
   schedule:
+
     - cron: "0 2 * * *"
-  workflow_dispatch:
+
+  # push:
+
+  #   branches: ["main"]
+
+
 
 jobs:
+
   update-readme:
+
     name: Update Readme with badges
+
     runs-on: ubuntu-latest
 
+
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
 
       - name: Badges - Readme
+
         uses: pemtajo/badge-readme@main
+
         with:
+
           CREDLY_USER: guilherme-oliveira.54e02c9b
 
-      - name: Fix badges inline layout
-        run: |
-          tr '\n' ' ' < README.md > README.tmp && mv README.tmp README.md
-          sed -i 's/[[:space:]]\+/ /g' README.md
 
-      - name: Commit changes
+
+      - name: Fix badges inline layout
+
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "fix: badges layout" || echo "No changes to commit"
-          git push
+
+          sed -i ':a;N;$!ba;s/>\n</> </g' README.md
+
+          sed -i 's/\n\n/\n/g' README.md
