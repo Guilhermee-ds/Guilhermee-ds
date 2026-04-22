@@ -34,36 +34,83 @@ jobs:
           README_PATH = "README.md"
           START_MARKER = "<!--START_SECTION:badges-->"
           END_MARKER   = "<!--END_SECTION:badges-->"
-          COLS = 8  # quantas badges por linha
+          COLS = 8
 
-          # 1. Busca todas as badges paginando
-          badges = []
-          page = 1
-          while True:
-              url = f"https://www.credly.com/users/{CREDLY_USER}/badges.json?page={page}&page_size=50"
-              resp = requests.get(url, timeout=15)
-              resp.raise_for_status()
-              data = resp.json()
-              batch = data.get("data", [])
-              if not batch:
-                  break
-              badges.extend(batch)
-              meta = data.get("metadata", {})
-              if page >= meta.get("total_pages", 1):
-                  break
-              page += 1
+          HEADERS = {
+              "Accept": "application/json",
+              "User-Agent": "Mozilla/5.0 (compatible; badge-readme-bot/1.0)",
+          }
 
-          print(f"Total de badges: {len(badges)}")
+          def fetch_all_badges(base_url):
+              """Busca todas as paginas de uma URL base e retorna lista de badges."""
+              badges = []
+              page = 1
+              while True:
+                  url = f"{base_url}?page={page}&page_size=50"
+                  resp = requests.get(url, headers=HEADERS, timeout=15)
+                  if resp.status_code != 200:
+                      print(f"  Aviso: {url} retornou {resp.status_code}, pulando.")
+                      break
+                  data = resp.json()
+                  batch = data.get("data", [])
+                  if not batch:
+                      break
+                  badges.extend(batch)
+                  meta = data.get("metadata", {})
+                  if page >= meta.get("total_pages", 1):
+                      break
+                  page += 1
+              return badges
 
-          # 2. Monta lista de tuplas (url, imagem, titulo)
+          # 1. Endpoint publico padrao (retorna badges accepted)
+          print("Buscando badges (endpoint publico)...")
+          url_public = f"https://www.credly.com/users/{CREDLY_USER}/badges.json"
+          badges_public = fetch_all_badges(url_public)
+          print(f"  Encontradas: {len(badges_public)}")
+
+          # 2. Endpoint da API v1 com sort=issued_at (pode trazer badges da aba Other)
+          print("Buscando badges (API v1 sort=issued_at)...")
+          url_v1 = f"https://www.credly.com/users/{CREDLY_USER}/badges.json"
+          badges_sorted = fetch_all_badges(url_v1 + "&sort=-issued_at")
+          print(f"  Encontradas: {len(badges_sorted)}")
+
+          # 3. Tenta endpoint com filter state=all (nao documentado, pode funcionar)
+          print("Buscando badges (tentando state=all)...")
+          url_all = f"https://www.credly.com/users/{CREDLY_USER}/badges.json"
+          resp_test = requests.get(
+              f"{url_all}?page=1&page_size=50&filter[state]=all",
+              headers=HEADERS, timeout=15
+          )
+          badges_all = []
+          if resp_test.status_code == 200:
+              data_all = resp_test.json()
+              badges_all = data_all.get("data", [])
+              print(f"  Encontradas: {len(badges_all)}")
+          else:
+              print(f"  Nao disponivel (status {resp_test.status_code})")
+
+          # 4. Deduplica por ID mantendo ordem (public primeiro)
+          seen = set()
+          all_badges = []
+          for b in badges_public + badges_sorted + badges_all:
+              bid = b.get("id")
+              if bid and bid not in seen:
+                  seen.add(bid)
+                  all_badges.append(b)
+
+          print(f"Total unico de badges: {len(all_badges)}")
+
+          # 5. Monta itens
           items = []
-          for b in badges:
+          for b in all_badges:
               badge_url = f"https://www.credly.com/badges/{b['id']}"
               image_url = b.get("image", {}).get("url", "")
               title     = b.get("badge_template", {}).get("name", "Badge")
+              if not image_url:
+                  continue
               items.append((badge_url, image_url, title))
 
-          # 3. Gera tabela HTML — unica forma confiavel de fazer grid no GitHub README
+          # 6. Gera tabela HTML
           rows = [items[i:i+COLS] for i in range(0, len(items), COLS)]
 
           def make_td(badge_url, image_url, title):
@@ -82,7 +129,7 @@ jobs:
 
           grid_html = "<table>\n" + "\n".join(table_rows) + "\n</table>"
 
-          # 4. Substitui o bloco no README
+          # 7. Substitui no README
           with open(README_PATH, "r", encoding="utf-8") as f:
               content = f.read()
 
