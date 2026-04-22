@@ -3,7 +3,7 @@ name: Update Badges Grid
 on:
   schedule:
     - cron: "0 2 * * *"
-  workflow_dispatch: # permite rodar manualmente também
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -34,8 +34,9 @@ jobs:
           README_PATH = "README.md"
           START_MARKER = "<!--START_SECTION:badges-->"
           END_MARKER   = "<!--END_SECTION:badges-->"
+          COLS = 8  # quantas badges por linha
 
-          # ── 1. Busca todas as badges paginando ──────────────────────────
+          # 1. Busca todas as badges paginando
           badges = []
           page = 1
           while True:
@@ -52,27 +53,36 @@ jobs:
                   break
               page += 1
 
-          print(f"✅ {len(badges)} badges encontradas")
+          print(f"Total de badges: {len(badges)}")
 
-          # ── 2. Monta o bloco HTML em grade ──────────────────────────────
+          # 2. Monta lista de tuplas (url, imagem, titulo)
           items = []
           for b in badges:
-              badge_url  = f"https://www.credly.com/badges/{b['id']}"
-              image_url  = b.get("image", {}).get("url", "")
-              # garante tamanho 80x80 na URL da Credly
-              image_url  = image_url.replace("/size/110x110/", "/size/80x80/") \
-                                    .replace("/size/340x340/", "/size/80x80/")
-              title      = b.get("badge_template", {}).get("name", "Badge")
-              items.append(
+              badge_url = f"https://www.credly.com/badges/{b['id']}"
+              image_url = b.get("image", {}).get("url", "")
+              title     = b.get("badge_template", {}).get("name", "Badge")
+              items.append((badge_url, image_url, title))
+
+          # 3. Gera tabela HTML — unica forma confiavel de fazer grid no GitHub README
+          rows = [items[i:i+COLS] for i in range(0, len(items), COLS)]
+
+          def make_td(badge_url, image_url, title):
+              return (
+                  f'<td align="center">'
                   f'<a href="{badge_url}" title="{title}">'
-                  f'<img src="{image_url}" alt="{title}" width="80" height="80"></a>'
+                  f'<img src="{image_url}" width="80" height="80" alt="{title}"/>'
+                  f'</a></td>'
               )
 
-          # GitHub Markdown: imagens ficam inline quando NAO ha quebra de linha entre elas
-          # \n\n dentro de bloco HTML faz o GitHub sair do modo HTML e quebra o layout
-          grid_html = "<p>" + "".join(items) + "</p>"
+          table_rows = []
+          for row in rows:
+              cells = "".join(make_td(*item) for item in row)
+              cells += "<td></td>" * (COLS - len(row))
+              table_rows.append(f"<tr>{cells}</tr>")
 
-          # ── 3. Substitui o bloco no README ──────────────────────────────
+          grid_html = "<table>\n" + "\n".join(table_rows) + "\n</table>"
+
+          # 4. Substitui o bloco no README
           with open(README_PATH, "r", encoding="utf-8") as f:
               content = f.read()
 
@@ -80,7 +90,7 @@ jobs:
           end_idx   = content.find(END_MARKER)
 
           if start_idx == -1 or end_idx == -1:
-              raise RuntimeError("Marcadores não encontrados no README")
+              raise RuntimeError("Marcadores nao encontrados no README")
 
           new_content = (
               content[: start_idx + len(START_MARKER)]
@@ -93,7 +103,7 @@ jobs:
           with open(README_PATH, "w", encoding="utf-8") as f:
               f.write(new_content)
 
-          print("✅ README atualizado com sucesso")
+          print("README atualizado com sucesso")
           EOF
 
       - name: Commit and push if changed
