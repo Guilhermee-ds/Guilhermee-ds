@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Badges - Readme
         uses: pemtajo/badge-readme@main
         with:
@@ -18,8 +21,13 @@ jobs:
 
       - name: Fix badges inline layout
         run: |
-          # Remove quebras de linha entre badges
           tr '\n' ' ' < README.md > README.tmp && mv README.tmp README.md
-
-          # Limpa múltiplos espaços
           sed -i 's/[[:space:]]\+/ /g' README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "fix: badges layout" || echo "No changes to commit"
+          git push
