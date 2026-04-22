@@ -24,7 +24,7 @@ jobs:
 
       - name: Fetch badges and update README
         env:
-          CREDLY_USER: guilherme-oliveira.qqqq23  # ← seu usuário do Credly
+          CREDLY_USER: guilherme-oliveira.54e02c9b  # ← seu usuário do Credly
         run: |
           python3 - <<'EOF'
           import os
