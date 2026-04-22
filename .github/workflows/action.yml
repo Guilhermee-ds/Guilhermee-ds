@@ -1,42 +1,23 @@
 on:
-
   schedule:
-
     - cron: "0 2 * * *"
-    workflow_dispatch:
+  workflow_dispatch:
 
   # push:
-
   #   branches: ["main"]
 
-
-
 jobs:
-
   update-readme:
-
     name: Update Readme with badges
-
     runs-on: ubuntu-latest
 
-
-
     steps:
-
       - name: Badges - Readme
-
         uses: pemtajo/badge-readme@main
-
         with:
-
           CREDLY_USER: guilherme-oliveira.54e02c9b
 
-
-
       - name: Fix badges inline layout
-
         run: |
-
           sed -i ':a;N;$!ba;s/>\n</> </g' README.md
-
           sed -i 's/\n\n/\n/g' README.md
