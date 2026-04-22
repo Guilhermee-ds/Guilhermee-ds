@@ -1,115 +1,177 @@
 name: Update Badges Grid
 
 on:
-  schedule:
-    - cron: "0 2 * * *"
-  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
 
 jobs:
-  update-readme:
-    name: Update README with badges grid
-    runs-on: ubuntu-latest
+  update-readme:
+    name: Update README with badges grid
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+      - name: Set up Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install requests
+      - name: Install dependencies
+        run: pip install requests
 
-      - name: Fetch badges and update README
-        env:
-          CREDLY_USER: guilherme-oliveira.54e02c9b
-        run: |
-          python3 - <<'EOF'
-          import os
-          import requests
+      - name: Fetch badges and update README
+        env:
+          CREDLY_USER: guilherme-oliveira.54e02c9b
+        run: |
+          python3 - <<'EOF'
+          import os
+          import requests
 
-          CREDLY_USER = os.environ["CREDLY_USER"]
-          README_PATH = "README.md"
-          START_MARKER = "<!--START_SECTION:badges-->"
-          END_MARKER   = "<!--END_SECTION:badges-->"
-          COLS = 8  # quantas badges por linha
+          CREDLY_USER = os.environ["CREDLY_USER"]
+          README_PATH = "README.md"
+          START_MARKER = "<!--START_SECTION:badges-->"
+          END_MARKER   = "<!--END_SECTION:badges-->"
+          COLS = 8
 
-          # 1. Busca todas as badges paginando
-          badges = []
-          page = 1
-          while True:
-              url = f"https://www.credly.com/users/{CREDLY_USER}/badges.json?page={page}&page_size=50"
-              resp = requests.get(url, timeout=15)
-              resp.raise_for_status()
-              data = resp.json()
-              batch = data.get("data", [])
-              if not batch:
-                  break
-              badges.extend(batch)
-              meta = data.get("metadata", {})
-              if page >= meta.get("total_pages", 1):
-                  break
-              page += 1
+          HEADERS = {
+              "Accept": "application/json",
+              "User-Agent": "Mozilla/5.0 (compatible; badge-readme-bot/1.0)",
+          }
 
-          print(f"Total de badges: {len(badges)}")
+          def fetch_all_badges(base_url):
+              """Busca todas as paginas de uma URL base e retorna lista de badges."""
+              badges = []
+              page = 1
+              while True:
+                  url = f"{base_url}?page={page}&page_size=50"
+                  resp = requests.get(url, headers=HEADERS, timeout=15)
+                  if resp.status_code != 200:
+                      print(f"  Aviso: {url} retornou {resp.status_code}, pulando.")
+                      break
+                  data = resp.json()
+                  batch = data.get("data", [])
+                  if not batch:
+                      break
+                  badges.extend(batch)
+                  meta = data.get("metadata", {})
+                  if page >= meta.get("total_pages", 1):
+                      break
+                  page += 1
+              return badges
 
-          # 2. Monta lista de tuplas (url, imagem, titulo)
-          items = []
-          for b in badges:
-              badge_url = f"https://www.credly.com/badges/{b['id']}"
-              image_url = b.get("image", {}).get("url", "")
-              title     = b.get("badge_template", {}).get("name", "Badge")
-              items.append((badge_url, image_url, title))
+          # 1. Endpoint publico padrao (retorna badges accepted)
+          print("Buscando badges (endpoint publico)...")
+          url_public = f"https://www.credly.com/users/{CREDLY_USER}/badges.json"
+          badges_public = fetch_all_badges(url_public)
+          print(f"  Encontradas: {len(badges_public)}")
 
-          # 3. Gera tabela HTML — unica forma confiavel de fazer grid no GitHub README
-          rows = [items[i:i+COLS] for i in range(0, len(items), COLS)]
+          # 2. Endpoint da API v1 com sort=issued_at (pode trazer badges da aba Other)
+          print("Buscando badges (API v1 sort=issued_at)...")
+          url_v1 = f"https://www.credly.com/users/{CREDLY_USER}/badges.json"
+          badges_sorted = fetch_all_badges(url_v1 + "&sort=-issued_at")
+          print(f"  Encontradas: {len(badges_sorted)}")
 
-          def make_td(badge_url, image_url, title):
-              return (
-                  f'<td align="center">'
-                  f'<a href="{badge_url}" title="{title}">'
-                  f'<img src="{image_url}" width="80" height="80" alt="{title}"/>'
-                  f'</a></td>'
-              )
+          # 3. Tenta endpoint com filter state=all (nao documentado, pode funcionar)
+          print("Buscando badges (tentando state=all)...")
+          url_all = f"https://www.credly.com/users/{CREDLY_USER}/badges.json"
+          resp_test = requests.get(
+              f"{url_all}?page=1&page_size=50&filter[state]=all",
+              headers=HEADERS, timeout=15
+          )
+          badges_all = []
+          if resp_test.status_code == 200:
+              data_all = resp_test.json()
+              badges_all = data_all.get("data", [])
+              print(f"  Encontradas: {len(badges_all)}")
+          else:
+              print(f"  Nao disponivel (status {resp_test.status_code})")
 
-          table_rows = []
-          for row in rows:
-              cells = "".join(make_td(*item) for item in row)
-              cells += "<td></td>" * (COLS - len(row))
-              table_rows.append(f"<tr>{cells}</tr>")
+          # 4. Deduplica por ID mantendo ordem (public primeiro)
+          seen = set()
+          all_badges = []
+          for b in badges_public + badges_sorted + badges_all:
+              bid = b.get("id")
+              if bid and bid not in seen:
+                  seen.add(bid)
+                  all_badges.append(b)
 
-          grid_html = "<table>\n" + "\n".join(table_rows) + "\n</table>"
+          print(f"Total unico de badges: {len(all_badges)}")
 
-          # 4. Substitui o bloco no README
-          with open(README_PATH, "r", encoding="utf-8") as f:
-              content = f.read()
+          # 5. Monta itens
+          items = []
+          for b in all_badges:
+              badge_url = f"https://www.credly.com/badges/{b['id']}"
+              image_url = b.get("image", {}).get("url", "")
+              title     = b.get("badge_template", {}).get("name", "Badge")
+              if not image_url:
+                  continue
+              items.append((badge_url, image_url, title))
 
-          start_idx = content.find(START_MARKER)
-          end_idx   = content.find(END_MARKER)
+          # Badges "Unverified" (aba Other) nao aparecem na API - adicionar manualmente
+          MANUAL_BADGES = [
+              (
+                  "https://catalog-education.oracle.com/pls/certview/sharebadge?id=708527A0FB1E230570C9876622B449E009FF4D55FF7703BFF9E313288D41C234",
+                  "https://brm-workforce.oracle.com/content/dam/rit/ora-corp/people-and-culture/career-development/badges/oci-2025-certified-ai-foundations-associate.png",
+                  "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+              ),
+          ]
+          existing_urls = {url for url, _, _ in items}
+          for entry in MANUAL_BADGES:
+              if entry[0] not in existing_urls:
+                  items.append(entry)
 
-          if start_idx == -1 or end_idx == -1:
-              raise RuntimeError("Marcadores nao encontrados no README")
+          # 6. Gera tabela HTML
+          rows = [items[i:i+COLS] for i in range(0, len(items), COLS)]
 
-          new_content = (
-              content[: start_idx + len(START_MARKER)]
-              + "\n"
-              + grid_html
-              + "\n"
-              + content[end_idx:]
-          )
+          def make_td(badge_url, image_url, title):
+              return (
+                  f'<td align="center">'
+                  f'<a href="{badge_url}" title="{title}">'
+                  f'<img src="{image_url}" width="80" height="80" alt="{title}"/>'
+                  f'</a></td>'
+              )
 
-          with open(README_PATH, "w", encoding="utf-8") as f:
-              f.write(new_content)
+          table_rows = []
+          for row in rows:
+              cells = "".join(make_td(*item) for item in row)
+              cells += "<td></td>" * (COLS - len(row))
+              table_rows.append(f"<tr>{cells}</tr>")
 
-          print("README atualizado com sucesso")
-          EOF
+          grid_html = "<table>\n" + "\n".join(table_rows) + "\n</table>"
 
-      - name: Commit and push if changed
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --cached --quiet || git commit -m "chore: update badges grid [skip ci]"
-          git push
+          # 7. Substitui no README
+          with open(README_PATH, "r", encoding="utf-8") as f:
+              content = f.read()
+
+          start_idx = content.find(START_MARKER)
+          end_idx   = content.find(END_MARKER)
+
+          if start_idx == -1 or end_idx == -1:
+              raise RuntimeError("Marcadores nao encontrados no README")
+
+          new_content = (
+              content[: start_idx + len(START_MARKER)]
+              + "\n"
+              + grid_html
+              + "\n"
+              + content[end_idx:]
+          )
+
+          with open(README_PATH, "w", encoding="utf-8") as f:
+              f.write(new_content)
+
+          print("README atualizado com sucesso")
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore: update badges grid [skip ci]"
+          git push
