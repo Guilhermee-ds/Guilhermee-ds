@@ -19,5 +19,7 @@ jobs:
 
       - name: Fix badges inline layout
         run: |
-          sed -i ':a;N;$!ba;s/>\n</> </g' README.md
-          sed -i 's/\n\n/\n/g' README.md
+          # Remove quebras de linha entre as imagens das badges para forçar o layout inline
+          sed -i '/<a href="https:\/\/www.credly.com\/badges\// { N; s/\n//; }' README.md
+          # Remove espaços excessivos entre as tags de imagem
+          sed -i 's/> </></g' README.md
