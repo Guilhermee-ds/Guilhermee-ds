@@ -1,24 +1,107 @@
-name: Update badges
+name: Update Badges Grid
+
 on:
   schedule:
     - cron: "0 2 * * *"
-  workflow_dispatch:
-
-  # push:
-  #   branches: ["main"]
+  workflow_dispatch: # permite rodar manualmente também
 
 jobs:
   update-readme:
-    name: Update Readme with badges
+    name: Update README with badges grid
     runs-on: ubuntu-latest
 
     steps:
-      - name: Badges - Readme
-        uses: pemtajo/badge-readme@main
-        with:
-          CREDLY_USER: guilherme-oliveira.54e02c9b
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Fix badges inline layout
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch badges and update README
+        env:
+          CREDLY_USER: guilherme-oliveira.qqqq23  # ← seu usuário do Credly
         run: |
-          sed -i ':a;N;$!ba;s/>\n</> </g' README.md
-          sed -i 's/\n\n/\n/g' README.md
+          python3 - <<'EOF'
+          import os
+          import requests
+
+          CREDLY_USER = os.environ["CREDLY_USER"]
+          README_PATH = "README.md"
+          START_MARKER = "<!--START_SECTION:badges-->"
+          END_MARKER   = "<!--END_SECTION:badges-->"
+
+          # ── 1. Busca todas as badges paginando ──────────────────────────
+          badges = []
+          page = 1
+          while True:
+              url = f"https://www.credly.com/users/{CREDLY_USER}/badges.json?page={page}&page_size=50"
+              resp = requests.get(url, timeout=15)
+              resp.raise_for_status()
+              data = resp.json()
+              batch = data.get("data", [])
+              if not batch:
+                  break
+              badges.extend(batch)
+              meta = data.get("metadata", {})
+              if page >= meta.get("total_pages", 1):
+                  break
+              page += 1
+
+          print(f"✅ {len(badges)} badges encontradas")
+
+          # ── 2. Monta o bloco HTML em grade ──────────────────────────────
+          items = []
+          for b in badges:
+              badge_url  = f"https://www.credly.com/badges/{b['id']}"
+              image_url  = b.get("image", {}).get("url", "")
+              # garante tamanho 80x80 na URL da Credly
+              image_url  = image_url.replace("/size/110x110/", "/size/80x80/") \
+                                    .replace("/size/340x340/", "/size/80x80/")
+              title      = b.get("badge_template", {}).get("name", "Badge")
+              items.append(
+                  f'<a href="{badge_url}" title="{title}">'
+                  f'<img src="{image_url}" alt="{title}" width="80" height="80"></a>'
+              )
+
+          grid_html = (
+              '<div align="left">\n\n'
+              + "".join(items)
+              + "\n\n</div>"
+          )
+
+          # ── 3. Substitui o bloco no README ──────────────────────────────
+          with open(README_PATH, "r", encoding="utf-8") as f:
+              content = f.read()
+
+          start_idx = content.find(START_MARKER)
+          end_idx   = content.find(END_MARKER)
+
+          if start_idx == -1 or end_idx == -1:
+              raise RuntimeError("Marcadores não encontrados no README")
+
+          new_content = (
+              content[: start_idx + len(START_MARKER)]
+              + "\n"
+              + grid_html
+              + "\n"
+              + content[end_idx:]
+          )
+
+          with open(README_PATH, "w", encoding="utf-8") as f:
+              f.write(new_content)
+
+          print("✅ README atualizado com sucesso")
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore: update badges grid [skip ci]"
+          git push
