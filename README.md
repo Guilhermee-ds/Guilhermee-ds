@@ -1,7 +1,34 @@
-## 🇧🇷 Sobre — Português (Brasil) 
-Engenheiro de Software com +3 anos de experiência prática no desenvolvimento de sistemas backend escaláveis, soluções em cloud e aplicações com IA. Atuo no desenvolvimento de aplicações em produção que combinam performance backend, sistemas distribuídos, automação e IA aplicada, com foco em integrações com LLMs e RAG (Retrieval-Augmented Generation). Principais pontos • Backend & APIs: desenvolvimento de APIs REST escaláveis, processamento assíncrono e sistemas de alto volume • Linguagens: Go, PHP (Laravel) e Python para automação e integração com IA • IA & RAG: LangChain, busca vetorial (FAISS), embeddings e integração com LLMs • Cloud & Infra: AWS (EC2, S3, Bedrock), Docker e arquiteturas escaláveis com foco em custo • Automação: workflows com n8n, webhooks e integrações orientadas a eventos • Mobile: desenvolvimento e manutenção de aplicações com React Native • Performance: refatoração de sistemas legados, redução de latência e melhoria de confiabilidade --- 
-## 🇺🇸 About — English 
-Software Engineer with 3+ years of hands-on experience building scalable and reliable backend systems, cloud-based solutions, and AI-powered features. I design and deliver production-ready applications combining backend performance, distributed systems, and applied AI — with a strong focus on LLM integrations and Retrieval-Augmented Generation (RAG). Core strengths • Backend & APIs: design of scalable REST APIs, async processing, and high-throughput systems • Languages: Go (Golang), PHP (Laravel), Python for automation and AI integration • AI & RAG: LangChain, vector search (FAISS), embeddings, and LLM integrations (OpenAI, Ollama) • Cloud & Infra: AWS (EC2, S3, Bedrock), Docker, cost-efficient and scalable architectures • Automation: workflow automation with n8n, webhooks, and event-driven integrations • Mobile: experience building and maintaining apps with React Native • Systems & Performance: refactoring legacy systems, reducing latency, and improving reliability What I bring • Experience building end-to-end systems integrating backend, cloud, automation, and AI • Strong focus on performance, scalability, and cost optimization • Practical mindset: I prioritize working solutions over unnecessary complexity Open to Backend, AI Engineering (LLM/RAG), or Cloud-focused roles. --- 
+## 🇧🇷 Sobre
+
+Engenheiro de Software com +3 anos de experiência em backend escalável, cloud e IA aplicada.
+Desenvolvo aplicações em produção combinando performance backend, sistemas distribuídos e automação — com foco em integrações com LLMs e RAG.
+
+**Principais pontos**
+- 🔧 **Backend & APIs** — APIs REST escaláveis, processamento assíncrono e alto volume
+- 💻 **Linguagens** — Go, PHP (Laravel), Python, Java (Spring Boot)
+- 🧠 **IA & RAG** — LangChain, FAISS, embeddings e integração com LLMs
+- ☁️ **Cloud & Infra** — AWS (EC2, S3, Bedrock), Docker e arquiteturas com foco em custo
+- ⚙️ **Automação** — n8n, webhooks e integrações orientadas a eventos
+- 📱 **Mobile** — React Native
+- ⚡ **Performance** — refatoração de legados, redução de latência e confiabilidade
+
+---
+
+## 🇺🇸 About
+
+Software Engineer with 3+ years of hands-on experience building scalable backend systems, cloud solutions, and AI-powered features.
+I deliver production-ready applications combining backend performance, distributed systems, and applied AI — with a strong focus on LLM integrations and RAG.
+
+**Core strengths**
+- 🔧 **Backend & APIs** — scalable REST APIs, async processing, high-throughput systems
+- 💻 **Languages** — Go, PHP (Laravel), Python, Java (Spring Boot)
+- 🧠 **AI & RAG** — LangChain, FAISS, embeddings, LLM integrations (OpenAI, Ollama)
+- ☁️ **Cloud & Infra** — AWS (EC2, S3, Bedrock), Docker, cost-efficient architectures
+- ⚙️ **Automation** — n8n, webhooks, event-driven integrations
+- 📱 **Mobile** — React Native
+- ⚡ **Performance** — refactoring legacy systems, reducing latency, improving reliability
+
+--- 
 ## 🌐 Socials: 
 <a href="https://www.linkedin.com/in/guilherme-oliveira-121b16239/" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /> <a href="mailto:contato.guilhermedossantos@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> 
 # 🏅My badges <!--START_SECTION:badges-->
