@@ -122,7 +122,7 @@ jobs:
               (
                   "https://www.virtualbadge.io/certificate-validator?credential=902f9e06-d985-4065-9103-82cbf01bb015",
                   "https://vbeventstorage.blob.core.windows.net/cert-tcuby6mnfvdci3u0-sbfl/openbadges/badges/902f9e06-d985-4065-9103-82cbf01bb015.png",
-                  "VirtualBadge - Certificate Validator",
+                  "Introduction to Platform Engineering",
               ),
           ]
           existing_urls = {url for url, _, _ in items}
