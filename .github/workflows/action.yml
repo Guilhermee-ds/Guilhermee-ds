@@ -116,8 +116,13 @@ jobs:
           MANUAL_BADGES = [
               (
                   "https://catalog-education.oracle.com/pls/certview/sharebadge?id=708527A0FB1E230570C9876622B449E009FF4D55FF7703BFF9E313288D41C234",
-                  "https://brm-workforce.oracle.com/content/dam/rit/ora-corp/people-and-culture/career-development/badges/oci-2025-certified-ai-foundations-associate.png",
+                  "https://raw.githubusercontent.com/guilhermee-ds/guilhermee-ds/main/assets/badges/badges.jpeg",
                   "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+              ),
+              (
+                  "https://www.virtualbadge.io/certificate-validator?credential=902f9e06-d985-4065-9103-82cbf01bb015",
+                  "https://vbeventstorage.blob.core.windows.net/cert-tcuby6mnfvdci3u0-sbfl/openbadges/badges/902f9e06-d985-4065-9103-82cbf01bb015.png",
+                  "VirtualBadge - Certificate Validator",
               ),
           ]
           existing_urls = {url for url, _, _ in items}
